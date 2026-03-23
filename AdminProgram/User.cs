@@ -47,7 +47,9 @@ namespace AdminProgram
                 }
                 else
                 {
+                    Console.Clear();
                     Console.WriteLine("Email is invalid.");
+                    Console.WriteLine("");
                 }
             }
         }

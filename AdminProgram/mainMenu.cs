@@ -10,48 +10,40 @@ namespace AdminProgram
     {
         public void mainProgram()
         {
-            //List<User> _userList = new List<User>();
-
-
-            User user1 = new User("User", "Example@gmail.com", "Obama 23", "06 5556555", 0);
-
-            bool validEmail = false;
+            Commands commands = new Commands();
 
             Console.WriteLine("1 = Add user");
-            Console.WriteLine("2 = View user");
-            Console.WriteLine("3 = Remove user");
+            Console.WriteLine("2 = Remove user");
+            Console.WriteLine("3 = View user");
             Console.WriteLine("4 = Edit user");
+            Console.WriteLine("5 = Exit program");
 
             string mainMenuInput = Console.ReadLine();
 
 
             if (mainMenuInput == "1")
             {
-                Console.Clear();
-                Console.WriteLine("Name:");
-                string nameInput = Console.ReadLine();
-                user1.Name = nameInput;
+                commands.AddUser();
+            }
 
-                while (!validEmail)
-                {
-                    Console.Clear();
-                    Console.WriteLine("Email:");
-                    string emailInput = Console.ReadLine();
-                    user1.Email = emailInput;
+            else if (mainMenuInput == "2")
+            {
+                commands.RemoveUser();
+            }
 
-                    if (emailInput.Contains("@gmail.com"))
-                    {
-                        validEmail = true;
-                    }
-                }
+            else if (mainMenuInput == "3")
+            {
+                commands.ViewUser();
+            }
 
-                if (validEmail)
-                {
-                    Console.Clear();
-                    Console.WriteLine("Name: " + user1.Name);
-                    Console.WriteLine("Email: " + user1.Email);
-                }
+            else if (mainMenuInput == "4")
+            {
+                commands.EditUser();
+            }
 
+            else if (mainMenuInput == "5")
+            {
+                commands.ExitProgram();
             }
         }  
     }
