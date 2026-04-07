@@ -10,40 +10,46 @@ namespace AdminProgram
     {
         public void mainProgram()
         {
+            bool validInput = false;
             Commands commands = new Commands();
 
+            Console.Clear();
             Console.WriteLine("1 = Add user");
             Console.WriteLine("2 = Remove user");
             Console.WriteLine("3 = View user");
             Console.WriteLine("4 = Edit user");
             Console.WriteLine("5 = Exit program");
 
-            string mainMenuInput = Console.ReadLine();
-
-
-            if (mainMenuInput == "1")
+ 
+            while (!validInput)
             {
-                commands.AddUser();
-            }
+                string mainMenuInput = Console.ReadLine();
 
-            else if (mainMenuInput == "2")
-            {
-                commands.RemoveUser();
-            }
 
-            else if (mainMenuInput == "3")
-            {
-                commands.ViewUser();
-            }
+                if (mainMenuInput == "1")
+                {
+                    commands.AddUser();
+                }
 
-            else if (mainMenuInput == "4")
-            {
-                commands.EditUser();
-            }
+                else if (mainMenuInput == "2")
+                {
+                    commands.RemoveUser();
+                }
 
-            else if (mainMenuInput == "5")
-            {
-                commands.ExitProgram();
+                else if (mainMenuInput == "3")
+                {
+                    commands.ViewUser();
+                }
+
+                else if (mainMenuInput == "4")
+                {
+                    commands.EditUser();
+                }
+
+                else if (mainMenuInput == "5")
+                {
+                    commands.ExitProgram();
+                }
             }
         }  
     }
