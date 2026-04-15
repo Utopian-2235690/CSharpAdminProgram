@@ -8,21 +8,21 @@ namespace AdminProgram
 {
     internal class mainMenu
     {
+        Commands commands = new Commands();
         public void mainProgram()
         {
             bool validInput = false;
-            Commands commands = new Commands();
 
-            Console.Clear();
-            Console.WriteLine("1 = Add user");
-            Console.WriteLine("2 = Remove user");
-            Console.WriteLine("3 = View user");
-            Console.WriteLine("4 = Edit user");
-            Console.WriteLine("5 = Exit program");
 
  
             while (!validInput)
             {
+                Console.Clear();
+                Console.WriteLine("1 = Add user");
+                Console.WriteLine("2 = Remove user");
+                Console.WriteLine("3 = View user");
+                Console.WriteLine("4 = Edit user");
+                Console.WriteLine("5 = Exit program");
                 string mainMenuInput = Console.ReadLine();
 
 

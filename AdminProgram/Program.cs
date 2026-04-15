@@ -12,7 +12,6 @@ namespace AdminProgram
         {
             mainMenu MainMenu = new mainMenu();
             MainMenu.mainProgram();
-
         }
     }
 }
